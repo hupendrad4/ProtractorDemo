@@ -26,6 +26,7 @@ describe('Test Calculator app', function () {
 
         browser.sleep(10000)
     });
+    // adding substraction
     it('Substraction test', function () {
 
         homepage.getURL('http://juliemr.github.io/protractor-demo/');
