@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuites disabled="0" errors="0" failures="4" tests="4" time="11.41">
- <testsuite name="Test Calculator app" timestamp="2021-05-04T19:48:58" hostname="localhost" time="11.41" errors="0" tests="4" skipped="0" disabled="0" failures="4">
-  <testcase classname="Test Calculator app" name="addition test" time="4.242">
+<testsuites disabled="0" errors="0" failures="4" tests="4" time="11.298">
+ <testsuite name="Test Calculator app" timestamp="2021-05-05T09:34:23" hostname="localhost" time="11.298" errors="0" tests="4" skipped="0" disabled="0" failures="4">
+  <testcase classname="Test Calculator app" name="addition test" time="4.134">
    <failure type="exception" message="Failed: javascript error: searchText.indexOf is not a function
   (Session info: chrome=90.0.4430.93)
   (Driver info: chromedriver=90.0.4430.24 (4c6d850f087da467d926e8eddb76550aed655991-refs/branch-heads/4430@{#429}),platform=Windows NT 10.0.18363 x86_64)"><![CDATA[JavascriptError: javascript error: searchText.indexOf is not a function
@@ -67,7 +67,7 @@ Error
     at Function.Module._load (internal/modules/cjs/loader.js:769:14)]]>
    </failure>
   </testcase>
-  <testcase classname="Test Calculator app" name="Substraction test" time="2.423">
+  <testcase classname="Test Calculator app" name="Substraction test" time="2.355">
    <failure type="exception" message="Failed: javascript error: searchText.indexOf is not a function
   (Session info: chrome=90.0.4430.93)
   (Driver info: chromedriver=90.0.4430.24 (4c6d850f087da467d926e8eddb76550aed655991-refs/branch-heads/4430@{#429}),platform=Windows NT 10.0.18363 x86_64)"><![CDATA[JavascriptError: javascript error: searchText.indexOf is not a function
@@ -103,7 +103,7 @@ From: Task: WebDriver.call(function)
     at ElementArrayFinder.<computed> [as getText] (C:\Users\HDeore\AppData\Roaming\npm\node_modules\protractor\built\element.js:91:29)
     at ElementFinder.<computed> [as getText] (C:\Users\HDeore\AppData\Roaming\npm\node_modules\protractor\built\element.js:831:22)
     at homepage.verifyResult (D:\MyWorkSpace\Learning\Protractor\pages\homepage.js:30:23)
-    at UserContext.<anonymous> (D:\MyWorkSpace\Learning\Protractor\tests\calculator.js:39:18)
+    at UserContext.<anonymous> (D:\MyWorkSpace\Learning\Protractor\tests\calculator.js:40:18)
     at C:\Users\HDeore\AppData\Roaming\npm\node_modules\protractor\node_modules\jasminewd2\index.js:112:25
     at new ManagedPromise (C:\Users\HDeore\AppData\Roaming\npm\node_modules\protractor\node_modules\selenium-webdriver\lib\promise.js:1077:7)
     at ControlFlow.promise (C:\Users\HDeore\AppData\Roaming\npm\node_modules\protractor\node_modules\selenium-webdriver\lib\promise.js:2505:12)
@@ -122,7 +122,7 @@ From: Task: Run it("Substraction test") in control flow
     at C:\Users\HDeore\AppData\Roaming\npm\node_modules\protractor\node_modules\selenium-webdriver\lib\promise.js:2599:53
 From asynchronous test: 
 Error
-    at Suite.<anonymous> (D:\MyWorkSpace\Learning\Protractor\tests\calculator.js:29:5)
+    at Suite.<anonymous> (D:\MyWorkSpace\Learning\Protractor\tests\calculator.js:30:5)
     at addSpecsToSuite (C:\Users\HDeore\AppData\Roaming\npm\node_modules\protractor\node_modules\jasmine-core\lib\jasmine-core\jasmine.js:1107:25)
     at Env.describe (C:\Users\HDeore\AppData\Roaming\npm\node_modules\protractor\node_modules\jasmine-core\lib\jasmine-core\jasmine.js:1074:7)
     at describe (C:\Users\HDeore\AppData\Roaming\npm\node_modules\protractor\node_modules\jasmine-core\lib\jasmine-core\jasmine.js:4399:18)
@@ -133,7 +133,7 @@ Error
     at Function.Module._load (internal/modules/cjs/loader.js:769:14)]]>
    </failure>
   </testcase>
-  <testcase classname="Test Calculator app" name="Division test" time="2.391">
+  <testcase classname="Test Calculator app" name="Division test" time="2.39">
    <failure type="exception" message="Failed: javascript error: searchText.indexOf is not a function
   (Session info: chrome=90.0.4430.93)
   (Driver info: chromedriver=90.0.4430.24 (4c6d850f087da467d926e8eddb76550aed655991-refs/branch-heads/4430@{#429}),platform=Windows NT 10.0.18363 x86_64)"><![CDATA[JavascriptError: javascript error: searchText.indexOf is not a function
@@ -169,7 +169,7 @@ From: Task: WebDriver.call(function)
     at ElementArrayFinder.<computed> [as getText] (C:\Users\HDeore\AppData\Roaming\npm\node_modules\protractor\built\element.js:91:29)
     at ElementFinder.<computed> [as getText] (C:\Users\HDeore\AppData\Roaming\npm\node_modules\protractor\built\element.js:831:22)
     at homepage.verifyResult (D:\MyWorkSpace\Learning\Protractor\pages\homepage.js:30:23)
-    at UserContext.<anonymous> (D:\MyWorkSpace\Learning\Protractor\tests\calculator.js:54:18)
+    at UserContext.<anonymous> (D:\MyWorkSpace\Learning\Protractor\tests\calculator.js:55:18)
     at C:\Users\HDeore\AppData\Roaming\npm\node_modules\protractor\node_modules\jasminewd2\index.js:112:25
     at new ManagedPromise (C:\Users\HDeore\AppData\Roaming\npm\node_modules\protractor\node_modules\selenium-webdriver\lib\promise.js:1077:7)
     at ControlFlow.promise (C:\Users\HDeore\AppData\Roaming\npm\node_modules\protractor\node_modules\selenium-webdriver\lib\promise.js:2505:12)
@@ -188,7 +188,7 @@ From: Task: Run it("Division test") in control flow
     at C:\Users\HDeore\AppData\Roaming\npm\node_modules\protractor\node_modules\selenium-webdriver\lib\promise.js:2599:53
 From asynchronous test: 
 Error
-    at Suite.<anonymous> (D:\MyWorkSpace\Learning\Protractor\tests\calculator.js:44:5)
+    at Suite.<anonymous> (D:\MyWorkSpace\Learning\Protractor\tests\calculator.js:45:5)
     at addSpecsToSuite (C:\Users\HDeore\AppData\Roaming\npm\node_modules\protractor\node_modules\jasmine-core\lib\jasmine-core\jasmine.js:1107:25)
     at Env.describe (C:\Users\HDeore\AppData\Roaming\npm\node_modules\protractor\node_modules\jasmine-core\lib\jasmine-core\jasmine.js:1074:7)
     at describe (C:\Users\HDeore\AppData\Roaming\npm\node_modules\protractor\node_modules\jasmine-core\lib\jasmine-core\jasmine.js:4399:18)
@@ -199,7 +199,7 @@ Error
     at Function.Module._load (internal/modules/cjs/loader.js:769:14)]]>
    </failure>
   </testcase>
-  <testcase classname="Test Calculator app" name="Multiplication test" time="2.352">
+  <testcase classname="Test Calculator app" name="Multiplication test" time="2.417">
    <failure type="exception" message="Failed: javascript error: searchText.indexOf is not a function
   (Session info: chrome=90.0.4430.93)
   (Driver info: chromedriver=90.0.4430.24 (4c6d850f087da467d926e8eddb76550aed655991-refs/branch-heads/4430@{#429}),platform=Windows NT 10.0.18363 x86_64)"><![CDATA[JavascriptError: javascript error: searchText.indexOf is not a function
@@ -235,7 +235,7 @@ From: Task: WebDriver.call(function)
     at ElementArrayFinder.<computed> [as getText] (C:\Users\HDeore\AppData\Roaming\npm\node_modules\protractor\built\element.js:91:29)
     at ElementFinder.<computed> [as getText] (C:\Users\HDeore\AppData\Roaming\npm\node_modules\protractor\built\element.js:831:22)
     at homepage.verifyResult (D:\MyWorkSpace\Learning\Protractor\pages\homepage.js:30:23)
-    at UserContext.<anonymous> (D:\MyWorkSpace\Learning\Protractor\tests\calculator.js:69:18)
+    at UserContext.<anonymous> (D:\MyWorkSpace\Learning\Protractor\tests\calculator.js:70:18)
     at C:\Users\HDeore\AppData\Roaming\npm\node_modules\protractor\node_modules\jasminewd2\index.js:112:25
     at new ManagedPromise (C:\Users\HDeore\AppData\Roaming\npm\node_modules\protractor\node_modules\selenium-webdriver\lib\promise.js:1077:7)
     at ControlFlow.promise (C:\Users\HDeore\AppData\Roaming\npm\node_modules\protractor\node_modules\selenium-webdriver\lib\promise.js:2505:12)
@@ -254,7 +254,7 @@ From: Task: Run it("Multiplication test") in control flow
     at C:\Users\HDeore\AppData\Roaming\npm\node_modules\protractor\node_modules\selenium-webdriver\lib\promise.js:2599:53
 From asynchronous test: 
 Error
-    at Suite.<anonymous> (D:\MyWorkSpace\Learning\Protractor\tests\calculator.js:59:5)
+    at Suite.<anonymous> (D:\MyWorkSpace\Learning\Protractor\tests\calculator.js:60:5)
     at addSpecsToSuite (C:\Users\HDeore\AppData\Roaming\npm\node_modules\protractor\node_modules\jasmine-core\lib\jasmine-core\jasmine.js:1107:25)
     at Env.describe (C:\Users\HDeore\AppData\Roaming\npm\node_modules\protractor\node_modules\jasmine-core\lib\jasmine-core\jasmine.js:1074:7)
     at describe (C:\Users\HDeore\AppData\Roaming\npm\node_modules\protractor\node_modules\jasmine-core\lib\jasmine-core\jasmine.js:4399:18)

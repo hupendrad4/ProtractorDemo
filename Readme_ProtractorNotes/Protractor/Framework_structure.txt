@@ -1,0 +1,31 @@
+
+*** Creating Protractor Framework on VSCode***
+**********************************************
+
+Pre-requisites:
+IDE-it is used for creating a systematic folder structure and edit the code
+
+	-WebStorm
+	-Eclipse
+	-VSCode
+
+Step-1: Download and install VSCode
+ 
+Step-2: Open VS Code and Install supporting lang -Javascript,Typescript
+
+Step-3: Create new folder and open in VSCode 
+
+Step-4: Inside Folder -Create 2 sub folder 
+		1. Conf
+		2. Tests
+	
+	
+ Note: Protractor used jasmin test framework by default , incase if we need to install 
+        --> npm install --save-dev jasmine
+		
+Step-5: Copy conf.js to conf folder
+		copy spec.js to test folder in vscode
+		
+Step-6: Update conf.js file with location of spec.js path
+
+Step-7: Run conf.js in Protractor

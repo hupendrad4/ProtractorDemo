@@ -1,0 +1,43 @@
+*** How to write first test case in Protractor ***
+**************************************************
+1. How to create a test file
+2. How to add steps in test file
+3. How to add element locators
+4. How to run test
+conf.js - configurations like browser, framework, etc
+spec.js - tests are present in spec file
+References
+Demo application - http://juliemr.github.io/protractor-d...​
+
+Protractor API - https://www.protractortest.org/#/api​
+prerequisite - https://www.youtube.com/playlist?list...​
+
+Jasmine cheatsheet - https://devhints.io/jasmine​
+
+VS Code extension : Protractor snippets - https://marketplace.visualstudio.com/...
+
+
+*********************************************************
+
+spec.js file-->
+
+describe('Test Calculator app',function(){
+
+    it('addition test',function(){
+
+        browser.get('http://juliemr.github.io/protractor-demo/');
+    
+        element(by.model('first')).sendKeys('5');
+
+        element(by.model('second')).sendKeys('7');
+        element(by.css('[ng-click="doAddition()"]')).click();
+
+        let result=element(by.cssContainingText('.ng-binding', '12'));
+        expect(result.getText()).toEqual('12');
+        browser.sleep(10000)
+    })
+
+
+
+
+})

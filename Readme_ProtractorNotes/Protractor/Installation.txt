@@ -1,0 +1,22 @@
+
+	How to Setup Protractor on Windows :
+********************************************
+Step-1 : Download and Install node.js on machin
+		https://nodejs.org/en/download/
+		
+		npm -version
+		node -version
+		
+Step -2: Install Protractor 
+         npm ---> Package manager
+		 npm install -g protractor
+		 
+		 protractor --version --> Version details
+
+Step -3: Run Command
+		 webdriver -manager update  --> get the browser driver
+		 
+Step -4: Find Conf.js file at 		{C:\Users\HDeore\AppData\Roaming\npm\node_modules\protractor\example}
+
+       On cmd go to the location of this file and run command
+	   protractor conf.js

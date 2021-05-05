@@ -1,0 +1,85 @@
+
+***How to create Allure report in Protractor***
+***********************************************
+
+Step 1: install Jasmin allure report plugin
+		https://www.npmjs.com/package/jasmine-allure-reporter
+		
+		npm i jasmine-allure-reporter
+		
+Step 2: Add Data in conf.js file 
+		exports.config = {
+		  framework: 'jasmine2',
+		  onPrepare: function() {
+			var AllureReporter = require('jasmine-allure-reporter');
+			jasmine.getEnv().addReporter(new AllureReporter({
+			  resultsDir: 'allure-results'
+			}));
+		  }
+		}
+		
+Step 3: run conf.js 
+
+Step 4: Add allure command line tool
+       
+	     npm i allure-commandline
+
+Step 5: Run command 
+		 allure serve "location of allure result folder"
+		 allure serve "D:\MyWorkSpace\Learning\Protractor\allure-results"
+		 
+************************************************************************************		 
+***How to create HTML report in Protractor***
+***********************************************
+
+Step 1: Get Protractor html reporter  plugin
+		npm i protractor-html-reporter-2
+		
+Step 2:Add dada in conf.js file
+			
+				//HTMLReport called once tests are finished
+		onComplete: function() {
+			 var browserName, browserVersion;
+			 var capsPromise = browser.getCapabilities();
+		 
+			 capsPromise.then(function (caps) {
+				browserName = caps.get('browserName');
+				browserVersion = caps.get('version');
+				platform = caps.get('platform');
+		 
+				var HTMLReport = require('protractor-html-reporter-2');
+		 
+				testConfig = {
+					reportTitle: 'Protractor Test Execution Report',
+					outputPath: './',
+					outputFilename: 'ProtractorTestReport',
+					screenshotPath: './screenshots',
+					testBrowser: browserName,
+					browserVersion: browserVersion,
+					modifiedSuiteName: false,
+					screenshotsOnlyOnFailure: true,
+					testPlatform: platform
+				};
+				new HTMLReport().from('xmlresults.xml', testConfig);
+			});
+		 }
+		
+    under onPrepare add :
+			 var jasmineReporters = require('jasmine-reporters');
+		jasmine.getEnv().addReporter(new jasmineReporters.JUnitXmlReporter({
+			consolidateAll: true,
+			savePath: './',
+			filePrefix: 'xmlresults'
+		}));	
+		
+		
+Step 3: Run conf.js and see reports		
+		
+		
+		
+		
+		
+		
+		
+		
+		

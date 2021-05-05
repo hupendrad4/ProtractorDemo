@@ -1,0 +1,198 @@
+
+
+**LOcator technique**
+*********************
+
+
+// Find an element using a css selector.
+	by.css('.myclass')
+
+// Find an element with the given id.
+	by.id('myid')
+
+// Find an element using an input name selector.
+	by.name('field_name')
+
+// Find an element with a certain ng-model.
+// Note that at the moment, this is only supported for AngularJS apps.
+	by.model('name')
+
+// Find an element bound to the given variable.
+// Note that at the moment, this is only supported for AngularJS apps.
+	by.binding('bindingname')
+	
+	
+*********************************************************
+The locators are passed to the element function, as below:
+
+element(by.css('some-css'));
+element(by.model('item.name'));
+element(by.binding('item.name'));
+
+
+**When using CSS Selectors as a locator, you can use the shortcut $() notation:
+
+		$('my-css');
+
+		// Is the same as:
+
+		element(by.css('my-css'));
+		
+		
+		
+		
+Actions:
+       The element() function returns an ElementFinder object. The ElementFinder knows how to locate the DOM element using the locator you passed in as a parameter, but it has not actually done so yet. It will not contact the browser until an action method has been called.
+
+The most common action methods are:
+
+		var el = element(locator);
+
+		// Click on the element.
+		el.click();
+
+		// Send keys to the element (usually an input).
+		el.sendKeys('my text');
+
+		// Clear the text in an element (usually an input).
+		el.clear();
+
+		// Get the value of an attribute, for example, get the value of an input.
+		el.getAttribute('value');
+		
+		
+Note-: 1. We can use POM Builder to idetify xpath
+		2. Protractor recorder
+		
+**********************************************************************
+Protractor API
+http://angular.github.io/protractor/#/api
+
+Note: Most commands return promises, so you only resolve their values through using jasmine expect API or using .then(function()) structure
+
+Based on this post: 
+
+Control browser:
+
+		browser.get('yoururl'); // Load address, can also use '#yourpage'
+
+		browser.navigate().back();
+
+		browser.navigate().forward();
+
+		browser.sleep(10000); // if your test is outrunning the browser
+
+		browser.waitForAngular(); // if your test is outrunning the browser
+
+		browser.getLocationAbsUrl() // get the current address
+
+		browser.ignoreSynchronization = true; // If true, Protractor will not attempt to synchronize with the page before performing actions
+
+   
+Here's a trick how to wait for something to become present/visible:
+
+			browser.wait(function() {
+			   return element(by.id('create')).isPresent();
+			}, 5000);
+			   
+			element(by.id('create')).click();
+			
+Check visibility:
+
+			element(by.id('create')).isPresent() // Be careful with this: element is often present while it's not displayed...
+
+			element(by.id('create')).isEnabled() //Enabled/disabled, as in ng-disabled...
+
+			element(by.id('create')).isDisplayed() //Is element currently visible/displayed?
+			
+			
+Find an element by id, model, binding:
+
+			element(by.id('user_name'))
+
+			element(by.css('#myItem'))
+
+			element(by.model('person.name')) // refers to ng-model directive
+
+			element(by.binding('person.concatName')); // refers to ng-bind directive
+
+			element(by.textarea('person.extraDetails'));
+
+			element (by.input( 'username' ));
+
+			element (by.input( 'username' )).clear();
+
+			element(by.buttonText('Save'));
+
+			element(by.partialButtonText('Save'));
+
+			element(by.linkText('Save'));
+
+			element(by.partialLinkText('Save'));
+
+			element(by.css('[ng-click="cancel()"]')); 
+
+			var dog = element(by.cssContainingText('.pet', 'Dog'));
+
+			var allOptions = element.all(by.options('c c in colors')); //When ng-options is used with selectbox
+		
+		
+Find collection of elements by css, repeater, xpath..
+
+			var list = element.all(by.css('.items));
+
+			var list2 = element.all(by.repeater('personhome.results'));
+
+			var list3 = element.all(by.xpath('//div
+
+			expect(list.count()).toBe(3);
+
+			expect(list.get(0).getText()).toBe('First’)
+
+			expect(list.get(1).getText()).toBe('Second’)
+
+			expect(list.first().getText()).toBe('First’)
+
+			expect(list.last().getText()).toBe('Last’)
+			
+			
+			
+Send keystrokes, clear
+
+			element(by.id('user_name').sendKeys("user1");
+
+			sendKeys(protractor.Key.ENTER);
+
+			sendKeys(protractor.Key.TAB);
+
+			element(by.id('user_name')).clear()
+			
+			
+Position and size, also how to deal with promises:
+
+		element(by.id('item1')).getLocation().then(function(location) {
+			  var x = location.x;
+			  var y = location.y;
+			});
+
+		element(by.id('item1')).getSize().then(function(size) {
+			  var width = size.width;
+			  var height = size.height;
+			});
+			
+Jasmine Matchers
+
+		to(Not)Be(null|true|false)
+		to(Not)Equal(value)
+		to(Not)Match(regex|string )
+		toBeDefined()
+		toBeUndefined()
+		toBeNull()
+		toBeTruthy()
+		toBeFalsy()
+		to(Not)Contain( string )
+		toBeLessThan( number )
+		toBeGreaterThan( number )
+		toBeNaN()
+		toBeCloseTo(number,precision )
+		toThrow()

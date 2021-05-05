@@ -1,0 +1,29 @@
+**How to Upload Protractor Framework on Git**
+*********************************************
+
+Step 1: Install git on System
+        npm i -g git install
+		or
+		https://git-scm.com/downloads
+		
+		git --version
+		
+Step 2:Create GitHub account and login to it
+
+Step 3: Create new repo on GitHub
+
+Step 4: Goto VSCode setting, 
+		-check git exe path is correct , if not update with valida
+		-check git enabled is checked
+		
+Step 5:Goto Version control section and initialise git repository
+
+Step 6:Commit changes to git
+
+Note : If not prompted with Username and Email
+	1.Set Username
+		git config --global user.name "Hupen Deore"
+	
+	2.Set Email Id
+		git config --global user.email "abc@gmail.com"
+	  
